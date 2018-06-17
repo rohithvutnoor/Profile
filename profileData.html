@@ -1,0 +1,44 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js">
+</script>
+<script src="app.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+ <!--jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<body ng-app = "myApp" ng-controller="myController">
+<div class="container">  		
+	<hr>
+	<!--<button type="button" class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#myModal">Add New</button>
+	-->
+	<center><h2>Profile Data</h2></center>
+		<div class="clearfix"></div>
+			<hr>
+		
+		<div class="alert alert-info alert-dismissible" role="alert" ng-if="info">
+	  <button type="button" class="close" aria-label="Close"><span aria-hidden="true" ng-click="clearInfo()">&times;</span></button>
+	  {{info}}
+	</div>
+	
+	<div class="card" ng-repeat = "user in users">
+				<h4>S.No:  <strong>{{ $index+1 }}</strong></h4>
+				<h4>Name: <strong>{{user.email}}</strong></h4>
+				<!--<strong>Email</strong>-->
+				<h4>Gender: <strong>{{user.gender}}</strong></h4>
+				<h4>Phone: <strong>{{user.phone}}</strong></h4>
+				<h4>Village: <strong>{{user.village}}</strong></h4><hr>
+	</div>
+		
+</div>    
+
+
+</body>
+</html>
